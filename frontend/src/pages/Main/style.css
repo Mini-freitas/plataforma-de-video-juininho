@@ -1,0 +1,126 @@
+.main{
+    grid-area: m;
+    margin-top: 7rem;
+
+    display: grid;
+    grid-template-areas: "e d";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .box_esquerda{
+        grid-area: e;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding-left: 15%;
+        color: white;
+
+        h4{
+            font-family: "Inter", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: aqua;
+            display: flex;
+            gap: .5rem;
+        }
+        h1{
+            font-family: "Inter", sans-serif;
+            font-size: 3rem;
+        }
+        a{
+            padding: 1.3rem 0;
+            width: 70%;
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.1rem;
+            background-color: aqua;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 2px 1px rgb(12, 12, 12);
+
+        }
+        a:hover{
+           background-color: white;
+           transition: .2s ease;
+
+        }
+
+        h3{
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: rgb(178, 178, 178);
+
+            strong{
+                font-weight: 550;
+                color: white;
+            }
+        }
+
+        
+    }
+    .box_direita{
+        grid-area: d;
+
+    }
+}
+
+@media (max-width: 992px){
+    .main{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       display: grid;
+       grid-template-areas: "e";
+       grid-template-columns: 1fr;
+
+       .box_esquerda{
+       
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+        margin: 4rem;
+
+        h4{
+            font-size: .9rem;
+        }
+        h1{
+            font-size: 2rem;
+        }
+
+         a{
+            padding: 1rem 0;
+            width: 50%;
+        }
+        h3{
+            font-size: 1rem;
+        }
+       }
+    }
+}
+
+@media (max-width: 768px){
+
+    .main .box_esquerda h4{
+        font-size: 12px;
+    }
+
+    .main .box_esquerda h1{
+        font-size: 1.2rem;
+    }
+
+    .main .box_esquerda a{
+        font-size: 10px;
+        width: 80%;
+    }
+
+    .main .box_esquerda h3{
+        font-size: .8rem;
+    }
+}
